@@ -1,2 +1,0 @@
-this is test 12. 11 and 10 were unsuccessful.
-test 12 successful
