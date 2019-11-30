@@ -27,8 +27,10 @@ uname -v = #20-Ubuntu SMP Fri Oct 18 09:04:39 UTC 2019
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /home/yashkarandikar/code/ysearch/.venv/bin
 PATH: /home/yashkarandikar/.asdf/shims
 PATH: /home/yashkarandikar/.asdf/bin
+PATH: /home/yashkarandikar/.local/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
@@ -38,6 +40,7 @@ PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
 PATH: /snap/bin
+PATH: /home/yashkarandikar/.dotnet/tools
 PATH: /snap/bin
 
 

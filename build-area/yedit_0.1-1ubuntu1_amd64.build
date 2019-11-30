@@ -1,0 +1,133 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package yedit
+dpkg-buildpackage: info: source version 0.1-1ubuntu1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Yash Karandikar <nerdstep710@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: warning: Version number suggests Ubuntu changes, but Maintainer: does not have Ubuntu address
+dpkg-source: warning: Version number suggests Ubuntu changes, but there is no XSBC-Original-Maintainer field
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building yedit using existing ./yedit_0.1.orig.tar.gz
+dpkg-source: info: building yedit in yedit_0.1-1ubuntu1.debian.tar.xz
+dpkg-source: info: building yedit in yedit_0.1-1ubuntu1.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... none
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+   dh_auto_build
+	make -j4
+make[1]: Entering directory '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1'
+gcc -DPACKAGE_NAME=\"yedit\" -DPACKAGE_TARNAME=\"yedit\" -DPACKAGE_VERSION=\"0.1\" -DPACKAGE_STRING=\"yedit\ 0.1\" -DPACKAGE_BUGREPORT=\"nerdstep710@gmail.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"yedit\" -DVERSION=\"0.1\" -I.   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/yashkarandikar/code/yEdit/build-area/yedit-0.1=. -fstack-protector-strong -Wformat -Werror=format-security -c -o yedit.o yedit.c
+yedit.c: In function ‘die’:
+yedit.c:77:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   77 |   write(STDOUT_FILENO, "\x1b[2J", 4);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yedit.c:78:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   78 |   write(STDOUT_FILENO, "\x1b[H", 3);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yedit.c: In function ‘editorRefreshScreen’:
+yedit.c:519:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  519 |   write(STDOUT_FILENO, ab.b, ab.len);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yedit.c: In function ‘editorProcessKeypress’:
+yedit.c:623:7: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  623 |       write(STDOUT_FILENO, "\x1b[2J", 4);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yedit.c:624:7: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  624 |       write(STDOUT_FILENO, "\x1b[H", 3);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc  -g -O2 -fdebug-prefix-map=/home/yashkarandikar/code/yEdit/build-area/yedit-0.1=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o yedit yedit.o  
+make[1]: Leaving directory '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make -j4 install DESTDIR=/home/yashkarandikar/code/yEdit/build-area/yedit-0.1/debian/yedit AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1'
+make[2]: Entering directory '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1/debian/yedit/usr/bin'
+  /usr/bin/install -c yedit '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1/debian/yedit/usr/bin'
+make[2]: Leaving directory '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1'
+make[1]: Leaving directory '/home/yashkarandikar/code/yEdit/build-area/yedit-0.1'
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_dwz
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'yedit' in '../yedit_0.1-1ubuntu1_amd64.deb'.
+dpkg-deb: building package 'yedit-dbgsym' in 'debian/.debhelper/scratch-space/build-yedit/yedit-dbgsym_0.1-1ubuntu1_amd64.deb'.
+	Renaming yedit-dbgsym_0.1-1ubuntu1_amd64.deb to yedit-dbgsym_0.1-1ubuntu1_amd64.ddeb
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../yedit_0.1-1ubuntu1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian yedit_0.1-1ubuntu1_amd64.changes ...
+E: yedit changes: bad-distribution-in-changes-file unstable
+E: yedit source: readme-source-is-dh_make-template
+W: yedit source: useless-autoreconf-build-depends autotools-dev
+W: yedit source: space-in-std-shortname-in-dep5-copyright <special license> (paragraph at line 5)
+E: yedit source: debian-rules-is-dh_make-template
+E: yedit source: maintainer-address-malformed Yash Karandikar <yashkarandikar@unknown>
+W: yedit source: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: yedit source: bad-homepage <insert the upstream URL, if relevant>
+W: yedit: wrong-bug-number-in-closes l3:#nnnn
+E: yedit: changelog-is-dh_make-template
+E: yedit: helper-templates-in-copyright
+W: yedit: copyright-has-url-from-dh_make-boilerplate
+E: yedit: copyright-contains-dh_make-todo-boilerplate
+W: yedit: readme-debian-contains-debmake-template
+E: yedit: maintainer-address-malformed Yash Karandikar <yashkarandikar@unknown>
+E: yedit: section-is-dh_make-template
+W: yedit: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: yedit: bad-homepage <insert the upstream URL, if relevant>
+E: yedit: description-is-dh_make-template
+W: yedit: binary-without-manpage usr/bin/yedit
+Finished running lintian.

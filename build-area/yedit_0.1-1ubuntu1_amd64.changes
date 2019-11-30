@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Sat, 30 Nov 2019 11:31:34 -0600
+Source: yedit
+Binary: yedit
+Architecture: source amd64
+Version: 0.1-1ubuntu1
+Distribution: unstable
+Urgency: medium
+Maintainer: Yash Karandikar <yashkarandikar@unknown>
+Changed-By: Yash Karandikar <nerdstep710@gmail.com>
+Description:
+ yedit      - <insert up to 60 chars description>
+Changes:
+ yedit (0.1-1ubuntu1) unstable; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 43817ddfde574112978db7c268b9cea04c6c335f 843 yedit_0.1-1ubuntu1.dsc
+ 25582f1201dfc611c5b2bf357e2bdf03a0556a88 79929 yedit_0.1.orig.tar.gz
+ 338e7269109cf6b04a9fc03296b480f8fd93b88f 2196 yedit_0.1-1ubuntu1.debian.tar.xz
+ 04b28d2c307af844b8d1ba1eddc2f1d5a8f2bebc 16816 yedit-dbgsym_0.1-1ubuntu1_amd64.ddeb
+ f787d03a527edc88fd00bd2acd862abb59188f73 6038 yedit_0.1-1ubuntu1_amd64.buildinfo
+ 55f38e07a80cb0da952f4795cad4a00a9c8976f8 9748 yedit_0.1-1ubuntu1_amd64.deb
+Checksums-Sha256:
+ ffc2377f1a9600281a548873fbacd9dfb791ecaa21117efb088196643ab48edf 843 yedit_0.1-1ubuntu1.dsc
+ 69c4017b6b753e33639220de18dd23dbbc2fdeead093646f7097184e5574d353 79929 yedit_0.1.orig.tar.gz
+ 4342e73262bc5a3ed7a7ee6e14e2ad4d1ef0b5422076aa6e48f0fd22799a5a40 2196 yedit_0.1-1ubuntu1.debian.tar.xz
+ 57ad8efe77f56154e5a49a5baadbafe4841e5139ab906283b827e0f355d99e8f 16816 yedit-dbgsym_0.1-1ubuntu1_amd64.ddeb
+ a9e20ce8b6da01e9d133c0dd802eb7788ca57394f43c154010074a9f7d0014b3 6038 yedit_0.1-1ubuntu1_amd64.buildinfo
+ abcf6807c74a0b6497c134f3a6c5acfd26db4055a1e0878ec5134a2c7dd5c811 9748 yedit_0.1-1ubuntu1_amd64.deb
+Files:
+ 302bbbf0b2e05afe13d6b8acdac38320 843 unknown optional yedit_0.1-1ubuntu1.dsc
+ b5dca3138dc53113e3ca13ff2d91137b 79929 unknown optional yedit_0.1.orig.tar.gz
+ 18f414e863f167dd56053c895c6f47a7 2196 unknown optional yedit_0.1-1ubuntu1.debian.tar.xz
+ eed2850aed253adf5ab6ae8bee6ffcec 16816 debug optional yedit-dbgsym_0.1-1ubuntu1_amd64.ddeb
+ 64a866ff6196c35e4924219175fc38fc 6038 unknown optional yedit_0.1-1ubuntu1_amd64.buildinfo
+ 35514f7fbf213af2ec2b3f2630691d45 9748 unknown optional yedit_0.1-1ubuntu1_amd64.deb
